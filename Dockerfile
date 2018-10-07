@@ -6,7 +6,7 @@ RUN apk update \
 && apk add jq \
 && rm -rf /var/cache/apk/*
 
-ADD get_emoji.sh /src/get_emoji.sh
-ADD emoji_db.json /src/emoji_db.json
+COPY get_emoji.sh /src/get_emoji.sh
+COPY emoji_db.json /src/emoji_db.json
 
 ENTRYPOINT ["/src/get_emoji.sh"]
