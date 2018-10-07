@@ -9,7 +9,7 @@ then
     
     if [ -z "${tag_suggestions}" ] && [ -z "${aliases_suggestions}" ]
     then
-        echo -e 'No emojis found related with: ' $1
+        echo -e $1': no emojis found'
     else
         echo -e 'Emoji not found🤦‍\nMaybe you where looking for...\n'
         echo $tag_suggestions $aliases_suggestions
